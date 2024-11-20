@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner {
+  width: 99vw;
+}
+nav {
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  top: 35px;
+  background-color: rgba(0, 0, 0, 0.765);
+}
+ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+}
+li {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  text-align: center;
+}
+nav > ul > li > a {
+  text-decoration: none;
+  font-style: none;
+  color: rgb(255, 255, 255);
+}
+a {
+  text-decoration: none;
+  font-style: none;
+  color: rgb(34, 34, 34);
+  border: 1px solid grey;
+  border-radius: 2px;
+  padding: 5px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.titel {
+  margin: auto;
+  font-size: 4rem;
+}
+.logo {
+  position: absolute;
+  max-width: 300px;
+  max-height: 200px;
+  left: 30%;
+  top: 50px;
+
+  animation: logo 3s ease-in-out;
+}
+
+@keyframes logo {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 30%;
+  }
+}
+
+.blog {
+  display: grid;
+  text-align: center;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  color: rgba(38, 38, 37, 0.88);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+
+  /* background-color: white; */
+}
+.blog_element {
+  margin: 20px;
+  border-radius: 5px;
+}
+.blog_image {
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* man sollte dem h1 und p eine eigene class geben damit es später keine überschneidungen gibt mit "allen" p und h1 tags aber im moment spare ich tags */
+h1 {
+  margin-top: 20px;
+}
+p {
+  margin: 20px;
+  text-align: justify;
+  border: 4px double white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+nav,
+#toggle {
+  display: none;
+}
+input[type="checkbox"]:checked ~ nav {
+  display: flex;
+}
+.menu {
+  width: 20px;
+  height: 5px;
+  background-color: black;
+  margin: 5px;
+}
+.menu_button {
+  height: 35px;
+}
+.impressum {
+  height: 50vh;
+  background-color: rgb(68, 104, 120);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
